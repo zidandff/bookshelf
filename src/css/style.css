@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+  }
+  body {
+    background-color: #EAEFF7;
+  }
+}
+
+@layer components {
+  .header-card {
+    @apply flex justify-between bg-white rounded-xl p-2 relative mt-2 md:mt-0 md:p-4 before:hidden md:before:block before:absolute before:inset-0 before:w-4 before:rounded-s-xl;
+  }
+}
+
+@layer utilities {
+  .gradient-light {
+    @apply bg-gradient-to-r from-[#6B8AF3] to-[#5835B3];
+  }
+}
