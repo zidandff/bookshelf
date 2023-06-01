@@ -14,12 +14,15 @@
 
 @layer components {
   .header-card {
-    @apply flex justify-between bg-white rounded-xl p-2 relative mt-2 md:mt-0 md:p-4 before:hidden md:before:block before:absolute before:inset-0 before:w-4 before:rounded-s-xl;
+    @apply flex justify-between bg-white rounded-xl p-2 relative mt-2 md:mt-0 md:p-4 before:hidden md:before:block before:absolute before:inset-0 before:w-4 before:rounded-s-xl bg-glass-dark;
+  }
+  .bg-glass-dark {
+    @apply dark:bg-gradient-to-b dark:bg-transparent dark:from-[#010313] dark:to-[#313847]/30 dark:border dark:border-[#828282]/30;
   }
 }
 
 @layer utilities {
-  .gradient-light {
-    @apply bg-gradient-to-r from-[#6B8AF3] to-[#5835B3];
+  .purple-gradient {
+    @apply bg-gradient-to-r from-[#6B8AF3] to-[#5835B3] dark:from-[#5835B3] dark:to-[#210668];
   }
 }

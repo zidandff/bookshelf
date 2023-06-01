@@ -12,19 +12,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class="dark:bg-[#000212]">
   <header>
     <div class="container flex justify-between items-center py-4">
-      <h1 class="text-xl font-medium">BookShelf</h1>
-      <button class="w-12 gradient-light block p-1 rounded-full">
-        <span class="h-5 w-5 bg-yellow-400 block rounded-full "></span>
+      <h1 class="text-xl font-medium dark:text-white">BookShelf</h1>
+      <button class="w-12 purple-gradient block p-1 rounded-full" id="theme-toggle">
+        <span class="h-5 w-5 bg-yellow-400 block rounded-full transition duration-300 dark:bg-gray-800"></span>
       </button>
     </div>
   </header>
 
   <main>
     <section class="container">
-      <div class="gradient-light flex justify-between rounded-2xl px-6 py-6 md:py-12 md:px-10 md:rounded-3xl">
+      <div class="purple-gradient flex justify-between rounded-2xl border border-[#828282]/30 px-6 py-6 md:py-12 md:px-10 md:rounded-3xl dark:from-[#010313] dark:via-[#5835B3]/40 dark:to-[#424C5F]/0 dark:bg-gradient-[110deg]">
         <h2 class="hidden text-4xl text-white font-medium md:block">Build Your <br> Own Library</h2>
         <div class="flex justify-between w-full md:w-6/12 lg:w-5/12 ">
           <div class="text-center px-2 text-white">
@@ -44,12 +44,12 @@
 
       <div class="flex gap-2 mt-2">
         <form class="relative flex-auto" action="">
-          <input class="py-3 px-4 pr-10 w-full text-sm rounded-full focus:outline-none focus:ring-primary focus:ring-1 md:text-base md:py-5 md:px-8 md:rounded-3xl" placeholder="Search book title, author, ISBN..." type="text">
+          <input class="py-3 px-4 pr-10 w-full text-sm rounded-full focus:outline-none focus:ring-primary focus:ring-1 md:text-base md:py-5 md:px-8 md:rounded-3xl bg-glass-dark dark:text-gray-300 dark:placeholder:text-gray-300" placeholder="Search book title, author, ISBN..." type="text">
           <svg class="absolute w-5 right-4 top-1/2 -translate-y-1/2 md:w-auto md:right-8" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M28 28L22.2133 22.2133M25.3333 14.6667C25.3333 16.7763 24.7077 18.8386 23.5357 20.5927C22.3636 22.3469 20.6977 23.714 18.7486 24.5214C16.7995 25.3287 14.6548 25.54 12.5857 25.1284C10.5166 24.7168 8.61596 23.7009 7.1242 22.2091C5.63244 20.7174 4.61654 18.8168 4.20496 16.7476C3.79339 14.6785 4.00462 12.5338 4.81196 10.5847C5.61929 8.63563 6.98646 6.96973 8.74059 5.79766C10.4947 4.62559 12.557 4 14.6667 4C17.4956 4 20.2088 5.12381 22.2091 7.12419C24.2095 9.12458 25.3333 11.8377 25.3333 14.6667Z" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>                      
         </form>
-        <button class="hidden gradient-light text-white text-base items-center px-8 py-5 rounded-3xl md:flex">
+        <button class="hidden purple-gradient text-white text-base items-center px-8 py-5 rounded-3xl md:flex">
           <span class="mr-10 font-normal">New Book</span>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 12H12M12 12H19M12 12V5M12 12V19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -61,10 +61,10 @@
     <section class="mt-4 md:mt-2">
       <div class="container md:grid md:grid-cols-3 md:gap-2 ">
         <div class="flex justify-between items-center md:hidden">
-          <h1 class="text-lg font-medium">Books Collection</h1>
+          <h1 class="text-lg font-medium dark:text-white">Books Collection</h1>
           <button>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.66667 5H17.5M6.66667 10H17.5M6.66667 15H17.5M2.5 5H2.50833M2.5 10H2.50833M2.5 15H2.50833" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="dark:stroke-white" d="M6.66667 5H17.5M6.66667 10H17.5M6.66667 15H17.5M2.5 5H2.50833M2.5 10H2.50833M2.5 15H2.50833" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
         </div>
@@ -72,12 +72,12 @@
         <article>
           <div class="header-card before:bg-yellow-300">
             <div class="flex place-items-center">
-              <h1 class="text-sm text-gray-600 font-normal ml-3">Reading</h1>
-              <span class="bg-slate text-xs bg-[#EAEFF7] rounded-md py-[2px] px-[6px] ml-1">2</span>
+              <h1 class="text-sm text-gray-600 font-normal ml-3 dark:text-gray-300">Reading</h1>
+              <span class="bg-slate text-xs bg-[#EAEFF7] rounded-md py-[2px] px-[6px] ml-1 dark:bg-indigo-950 dark:text-white">2</span>
             </div>
             <button class="md:hidden">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.59273 5.1745L2.61898 11.4441C2.51926 11.5487 2.46362 11.6877 2.46362 11.8323C2.46362 11.9768 2.51926 12.1158 2.61898 12.2204L2.62573 12.2271C2.67408 12.278 2.73227 12.3185 2.79677 12.3462C2.86127 12.3739 2.93073 12.3882 3.00092 12.3882C3.07111 12.3882 3.14057 12.3739 3.20507 12.3462C3.26957 12.3185 3.32776 12.278 3.37611 12.2271L9.00111 6.32313L14.6239 12.2271C14.6722 12.278 14.7304 12.3185 14.7949 12.3462C14.8594 12.3739 14.9289 12.3882 14.999 12.3882C15.0692 12.3882 15.1387 12.3739 15.2032 12.3462C15.2677 12.3185 15.3259 12.278 15.3742 12.2271L15.381 12.2204C15.4807 12.1158 15.5363 11.9768 15.5363 11.8323C15.5363 11.6877 15.4807 11.5487 15.381 11.4441L9.40723 5.1745C9.3547 5.11936 9.29151 5.07547 9.22151 5.04547C9.1515 5.01548 9.07614 5.00002 8.99998 5.00002C8.92382 5.00002 8.84846 5.01548 8.77845 5.04547C8.70845 5.07547 8.64526 5.11936 8.59273 5.1745Z" fill="#454545"/>
+                <path class="fill-gray-300" d="M8.59273 5.1745L2.61898 11.4441C2.51926 11.5487 2.46362 11.6877 2.46362 11.8323C2.46362 11.9768 2.51926 12.1158 2.61898 12.2204L2.62573 12.2271C2.67408 12.278 2.73227 12.3185 2.79677 12.3462C2.86127 12.3739 2.93073 12.3882 3.00092 12.3882C3.07111 12.3882 3.14057 12.3739 3.20507 12.3462C3.26957 12.3185 3.32776 12.278 3.37611 12.2271L9.00111 6.32313L14.6239 12.2271C14.6722 12.278 14.7304 12.3185 14.7949 12.3462C14.8594 12.3739 14.9289 12.3882 14.999 12.3882C15.0692 12.3882 15.1387 12.3739 15.2032 12.3462C15.2677 12.3185 15.3259 12.278 15.3742 12.2271L15.381 12.2204C15.4807 12.1158 15.5363 11.9768 15.5363 11.8323C15.5363 11.6877 15.4807 11.5487 15.381 11.4441L9.40723 5.1745C9.3547 5.11936 9.29151 5.07547 9.22151 5.04547C9.1515 5.01548 9.07614 5.00002 8.99998 5.00002C8.92382 5.00002 8.84846 5.01548 8.77845 5.04547C8.70845 5.07547 8.64526 5.11936 8.59273 5.1745Z" fill="#454545"/>
               </svg>                
             </button>
             <button class="hidden md:block">
@@ -88,12 +88,12 @@
           </div>
 
           <ul>
-            <li class="flex bg-white rounded-2xl mt-2 p-4">
+            <li class="flex bg-white rounded-2xl mt-2 p-4 bg-glass-dark">
               <img class="w-20 rounded aspect-[1/1.5] object-cover object-center md:w-16 lg:w-28" src="public/images/dune.jpg" alt="Dune cover book">
               <div class="ml-2 flex-auto flex flex-col justify-between">
                 <div>
-                  <h1 class="text-lg font-normal">The Power of Habit - Wh..</h1>
-                  <span class="text-sm text-gray-600">Frank Herbert</span>
+                  <h1 class="text-lg font-normal dark:text-white">The Power of Habit - Wh..</h1>
+                  <span class="text-sm text-gray-600 dark:text-gray-300 ">Frank Herbert</span>
                 </div>
                 <div class="flex items-center pb-2">
                   <div class="bg-primary/10 w-full rounded-full mr-2 ">
@@ -109,12 +109,12 @@
         <article class="row-start-1">
           <div class="header-card before:bg-primary">
             <div class="flex place-items-center">
-              <h1 class="text-sm text-gray-600 font-normal ml-3">Want To Read</h1>
-              <span class="bg-slate text-xs bg-[#EAEFF7] rounded-md py-[2px] px-[6px] ml-1">2</span>
+              <h1 class="text-sm text-gray-600 font-normal ml-3 dark:text-gray-300">Want To Read</h1>
+              <span class="bg-slate text-xs bg-[#EAEFF7] rounded-md py-[2px] px-[6px] ml-1 dark:bg-indigo-950 dark:text-white">2</span>
             </div>
             <button class="md:hidden">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.59273 5.1745L2.61898 11.4441C2.51926 11.5487 2.46362 11.6877 2.46362 11.8323C2.46362 11.9768 2.51926 12.1158 2.61898 12.2204L2.62573 12.2271C2.67408 12.278 2.73227 12.3185 2.79677 12.3462C2.86127 12.3739 2.93073 12.3882 3.00092 12.3882C3.07111 12.3882 3.14057 12.3739 3.20507 12.3462C3.26957 12.3185 3.32776 12.278 3.37611 12.2271L9.00111 6.32313L14.6239 12.2271C14.6722 12.278 14.7304 12.3185 14.7949 12.3462C14.8594 12.3739 14.9289 12.3882 14.999 12.3882C15.0692 12.3882 15.1387 12.3739 15.2032 12.3462C15.2677 12.3185 15.3259 12.278 15.3742 12.2271L15.381 12.2204C15.4807 12.1158 15.5363 11.9768 15.5363 11.8323C15.5363 11.6877 15.4807 11.5487 15.381 11.4441L9.40723 5.1745C9.3547 5.11936 9.29151 5.07547 9.22151 5.04547C9.1515 5.01548 9.07614 5.00002 8.99998 5.00002C8.92382 5.00002 8.84846 5.01548 8.77845 5.04547C8.70845 5.07547 8.64526 5.11936 8.59273 5.1745Z" fill="#454545"/>
+                <path class="fill-gray-300" d="M8.59273 5.1745L2.61898 11.4441C2.51926 11.5487 2.46362 11.6877 2.46362 11.8323C2.46362 11.9768 2.51926 12.1158 2.61898 12.2204L2.62573 12.2271C2.67408 12.278 2.73227 12.3185 2.79677 12.3462C2.86127 12.3739 2.93073 12.3882 3.00092 12.3882C3.07111 12.3882 3.14057 12.3739 3.20507 12.3462C3.26957 12.3185 3.32776 12.278 3.37611 12.2271L9.00111 6.32313L14.6239 12.2271C14.6722 12.278 14.7304 12.3185 14.7949 12.3462C14.8594 12.3739 14.9289 12.3882 14.999 12.3882C15.0692 12.3882 15.1387 12.3739 15.2032 12.3462C15.2677 12.3185 15.3259 12.278 15.3742 12.2271L15.381 12.2204C15.4807 12.1158 15.5363 11.9768 15.5363 11.8323C15.5363 11.6877 15.4807 11.5487 15.381 11.4441L9.40723 5.1745C9.3547 5.11936 9.29151 5.07547 9.22151 5.04547C9.1515 5.01548 9.07614 5.00002 8.99998 5.00002C8.92382 5.00002 8.84846 5.01548 8.77845 5.04547C8.70845 5.07547 8.64526 5.11936 8.59273 5.1745Z" fill="#454545"/>
               </svg>                
             </button>
             <button class="hidden md:block">
@@ -125,14 +125,14 @@
           </div>
 
           <ul>
-            <li class="flex bg-white rounded-2xl mt-2 p-4">
+            <li class="flex bg-white rounded-2xl mt-2 p-4 bg-glass-dark">
               <img class="w-20 rounded aspect-[1/1.5] object-cover object-center md:w-16 lg:w-28" src="public/images/dune.jpg" alt="Dune cover book">
               <div class="ml-2 flex-auto flex flex-col justify-between">
                 <div>
-                  <h1 class="text-lg font-normal">The Power of Habit - Wh..</h1>
-                  <span class="text-sm text-gray-600">Frank Herbert</span>
+                  <h1 class="text-lg font-normal dark:text-white">The Power of Habit - Wh..</h1>
+                  <span class="text-sm text-gray-600 dark:text-gray-300 ">Frank Herbert</span>
                 </div>
-                <button class="hidden self-start gradient-light text-white text-sm px-4 py-2 mb-2 rounded-full lg:block ">Start Reading</button>
+                <button class=" self-start purple-gradient text-white text-sm px-4 py-2 mb-2 rounded-full">Start Reading</button>
               </div>
             </li>
           </ul>
@@ -141,12 +141,12 @@
         <article>
           <div class="header-card before:bg-emerald-400">
             <div class="flex place-items-center">
-              <h1 class="text-sm text-gray-600 font-normal ml-3">Finished</h1>
-              <span class="bg-slate text-xs bg-[#EAEFF7] rounded-md py-[2px] px-[6px] ml-1">2</span>
+              <h1 class="text-sm text-gray-600 font-normal ml-3 dark:text-gray-300">Finished</h1>
+              <span class="bg-slate text-xs bg-[#EAEFF7] rounded-md py-[2px] px-[6px] ml-1 dark:bg-indigo-950 dark:text-white">2</span>
             </div>
             <button class="md:hidden">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.59273 5.1745L2.61898 11.4441C2.51926 11.5487 2.46362 11.6877 2.46362 11.8323C2.46362 11.9768 2.51926 12.1158 2.61898 12.2204L2.62573 12.2271C2.67408 12.278 2.73227 12.3185 2.79677 12.3462C2.86127 12.3739 2.93073 12.3882 3.00092 12.3882C3.07111 12.3882 3.14057 12.3739 3.20507 12.3462C3.26957 12.3185 3.32776 12.278 3.37611 12.2271L9.00111 6.32313L14.6239 12.2271C14.6722 12.278 14.7304 12.3185 14.7949 12.3462C14.8594 12.3739 14.9289 12.3882 14.999 12.3882C15.0692 12.3882 15.1387 12.3739 15.2032 12.3462C15.2677 12.3185 15.3259 12.278 15.3742 12.2271L15.381 12.2204C15.4807 12.1158 15.5363 11.9768 15.5363 11.8323C15.5363 11.6877 15.4807 11.5487 15.381 11.4441L9.40723 5.1745C9.3547 5.11936 9.29151 5.07547 9.22151 5.04547C9.1515 5.01548 9.07614 5.00002 8.99998 5.00002C8.92382 5.00002 8.84846 5.01548 8.77845 5.04547C8.70845 5.07547 8.64526 5.11936 8.59273 5.1745Z" fill="#454545"/>
+                <path class="fill-gray-300" d="M8.59273 5.1745L2.61898 11.4441C2.51926 11.5487 2.46362 11.6877 2.46362 11.8323C2.46362 11.9768 2.51926 12.1158 2.61898 12.2204L2.62573 12.2271C2.67408 12.278 2.73227 12.3185 2.79677 12.3462C2.86127 12.3739 2.93073 12.3882 3.00092 12.3882C3.07111 12.3882 3.14057 12.3739 3.20507 12.3462C3.26957 12.3185 3.32776 12.278 3.37611 12.2271L9.00111 6.32313L14.6239 12.2271C14.6722 12.278 14.7304 12.3185 14.7949 12.3462C14.8594 12.3739 14.9289 12.3882 14.999 12.3882C15.0692 12.3882 15.1387 12.3739 15.2032 12.3462C15.2677 12.3185 15.3259 12.278 15.3742 12.2271L15.381 12.2204C15.4807 12.1158 15.5363 11.9768 15.5363 11.8323C15.5363 11.6877 15.4807 11.5487 15.381 11.4441L9.40723 5.1745C9.3547 5.11936 9.29151 5.07547 9.22151 5.04547C9.1515 5.01548 9.07614 5.00002 8.99998 5.00002C8.92382 5.00002 8.84846 5.01548 8.77845 5.04547C8.70845 5.07547 8.64526 5.11936 8.59273 5.1745Z" fill="#454545"/>
               </svg>                
             </button>
             <button class="hidden md:block">
@@ -157,12 +157,12 @@
           </div>
 
           <ul>
-            <li class="flex bg-white rounded-2xl mt-2 p-4">
+            <li class="flex bg-white rounded-2xl mt-2 p-4 bg-glass-dark">
               <img class="w-20 rounded aspect-[1/1.5] object-cover object-center md:w-16 lg:w-28" src="public/images/dune.jpg" alt="Dune cover book">
               <div class="ml-2 flex-auto flex flex-col justify-between">
                 <div>
-                  <h1 class="text-lg font-normal">The Power of Habit - Wh..</h1>
-                  <span class="text-sm text-gray-600">Frank Herbert</span>
+                  <h1 class="text-lg font-normal dark:text-white">The Power of Habit - Wh..</h1>
+                  <span class="text-sm text-gray-600 dark:text-gray-300 ">Frank Herbert</span>
                   <br>
                   *****
                 </div>
@@ -174,6 +174,14 @@
       </div>
     </section>
 
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const html = document.querySelector('html');
+      themeToggle.addEventListener('click', function(){
+        this.firstElementChild.classList.toggle('translate-x-5');
+        html.classList.toggle('dark')
+      })
+    </script>
   </main>
 </body>
 </html>
