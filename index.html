@@ -5,7 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BookShelf Build Your Own Library</title>
-
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+    } else {
+        document.documentElement.classList.remove('dark')
+        localStorage.theme = 'light';
+    }
+  </script>
   <link rel="stylesheet" href="public/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +25,7 @@
     <div class="container flex justify-between items-center py-4">
       <h1 class="text-xl font-medium dark:text-white">BookShelf</h1>
       <button class="w-12 purple-gradient block p-1 rounded-full" id="theme-toggle">
-        <span class="h-5 w-5 bg-yellow-400 block rounded-full transition duration-300 dark:bg-gray-800"></span>
+        <span class="h-5 w-5 bg-yellow-400 block rounded-full transition duration-300 dark:bg-gray-800 dark:translate-x-5"></span>
       </button>
     </div>
   </header>
@@ -164,7 +172,6 @@
                   <h1 class="text-lg font-normal dark:text-white">The Power of Habit - Wh..</h1>
                   <span class="text-sm text-gray-600 dark:text-gray-300 ">Frank Herbert</span>
                   <br>
-                  *****
                 </div>
                 <span class="text-sm text-primary mb-2">Finished at 28 May 2023</span>
               </div>
@@ -175,12 +182,46 @@
     </section>
 
     <script>
-      const themeToggle = document.getElementById('theme-toggle');
-      const html = document.querySelector('html');
-      themeToggle.addEventListener('click', function(){
-        this.firstElementChild.classList.toggle('translate-x-5');
-        html.classList.toggle('dark')
-      })
+
+      function switchThemeToggle(){
+        if( localStorage.theme === 'dark' ){
+          enableLightMode(this);
+        } else{
+          enableDarkMode(this);
+        }
+      }
+
+      function enableDarkMode(toggleBtn){
+        localStorage.theme = 'dark';
+        document.documentElement.classList.add('dark')
+      }
+
+      function enableLightMode(toggleBtn){
+        localStorage.theme = 'light';
+        document.documentElement.classList.remove('dark')
+      }
+
+      const toggleBtn = document.querySelector('#theme-toggle')
+      toggleBtn.addEventListener('click', switchThemeToggle)
+
+      // PROCEDURAL 
+      // const themeToggle = document.getElementById('theme-toggle');
+      // const html = document.querySelector('html');
+      // themeToggle.addEventListener('click', function(){
+      //   themeToggle.firstElementChild.classList.toggle('translate-x-5');
+      //   html.classList.toggle('dark')
+
+      //   if(localStorage.theme == 'dark'){
+      //   localStorage.theme = 'light'
+      //   } else {
+      //     localStorage.theme = 'dark'
+      //   }
+      // })
+
+      // if(localStorage.theme == 'dark'){
+      //   themeToggle.firstElementChild.classList.add('translate-x-5');
+      //   html.classList.add('dark')
+      // }
     </script>
   </main>
 </body>
